@@ -22,5 +22,15 @@ jobs:
         
             - name: Generate README.md
               run: pandoc source.tex -o README.md
+
+            - name: Commit changes
+              run: |
+                git config --global user.email "austin353@gmail.com"
+                git config --global user.name "austinjhunt"
+                git add README.md
+                git commit -m "Generate README.md"
+                git push
+
+                
         
 
