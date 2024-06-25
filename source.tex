@@ -108,7 +108,7 @@
 \newcommand{\resumeSubheadingWithDescription}[4]{
   \vspace{4pt}\item%-1
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \multicolumn{2}{p{\dimexpr\textwidth-2\tabcolsep}}{\textbf{#1} - \small{#2}} \\
+      \multicolumn{2}{p{\dimexpr\textwidth-2\tabcolsep}}{\small \textbf{#1} - \small{#2}} \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
@@ -126,7 +126,7 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \newcommand{\resumeTech}[2]{
- \underline{#1:} #2
+   \small {\underline{#1:} #2}
 }
 
 % COLOR THEMES SELECTION
@@ -170,15 +170,19 @@
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheadingWithDescription
-      {NovaBrains.ai} {\small{An LLM-assisted digital textbook platform for educators and learners alike, offering an affordable toolkit that simplifies use and management of engaging, interactive courses.} \href{https://www.linkedin.com/in/ayman-hajja-09032b67/}{In collaboration with Ayman Hajja, PhD}. }
+      {\href{https://novabrains.ai}{(Part-time project) NovaBrains.ai}} {An LLM-assisted digital textbook platform for educators and learners alike, offering an affordable toolkit that simplifies use and management of engaging, interactive courses. \href{https://www.linkedin.com/in/ayman-hajja-09032b67/}{In collaboration with Ayman Hajja, PhD}. }
       {Roles: Cloud architect, devops engineer, full-stack co-developer, cofounder} {Oct 2023 - Present}
       \resumeItemListStart
-      \resumeItem{Architect AWS cloud microservice infrastructure with R53, EBS, Lambda, SAM, S3}
-      \resumeItem{Implement Cloudwatch-integrated Django logging middleware with standardized JSON formatting to simplify troubleshooting and monitoring}
-      \resumeItem{Design and implement CI/CD pipeline with GH Actions, AWS CLI, R53, and EBS with preview environment provisioning and Slack notification webhooks to aid rapid development}
-      \resumeItem{Meet multiple times a week with co-founder to discuss product roadmap, feature development, business strategy, and dev ops strategy for optimal growth}
       \resumeItem{
-        Co-develop front-end and back-end EBS environments with React and Django REST Framework using GitHub workflow
+      Architect \& implement AWS cloud microservice infrastructure with R53, EBS, Lambda, SAM, S3}
+      \resumeItem{
+      Implement Cloudwatch-integrated Django logging middleware with standardized JSON formatting to simplify troubleshooting and monitoring}
+      \resumeItem{
+      Design and implement CI/CD pipeline with GH Actions, AWS CLI, R53, and EBS with preview environment provisioning and Slack notification webhooks to aid rapid development}
+      \resumeItem{
+      Meet multiple times a week with co-founder to discuss product roadmap, feature development, business strategy, and dev ops strategy for optimal growth}
+      \resumeItem{
+        Co-develop front-end and back-end EBS environments with React and Django REST Framework using GitHub workflow to allow for parallel development
       }
       \resumeItem{
         Maintain detailed API documentation with Swagger and write API tests for each new endpoint
@@ -194,37 +198,101 @@
       }
       \resumeItem{
         Expand RBAC logic to allow TAs to assist instructors with course management
+      } 
+      \resumeItem{
+      Draft, organize, and refine custom LLM prompt templates to achieve desired JSON-formatted responses that integrate smoothly with the UI
+      }
+      \resumeItemListEnd
+      \resumeTech{Technologies}{AWS (CLI, SAM, R53, EBS, S3, Lambda, Cloudwatch, IAM), Python, JS, GitHub Actions, React, Material UI, Django REST Framework, OpenAI ChatGPT API, Swagger, Slack, Jira, GCP, reCAPTCHA, Postman}\\ 
+
+    \resumeSubheadingWithDescription
+      {\href{https://studyrocket.ai}{(Part-time project) StudyRocket.ai}}{An AI-powered study buddy that can help anyone \textit{master} rather than \textit{memorize} material by providing on-the-fly interactive quizzes about uploaded documents, linked articles, or chosen topics. In collaboration with Ayman Hajja, PhD.}
+      {Roles: Cloud architect, devops engineer, full-stack co-developer, cofounder}{June 2024 - Present}
+      \resumeItemListStart
+      \resumeItem{Implement, troubleshoot, and test microservice architecture and CI/CD pipelines very similar to NovaBrains.ai}
+      \resumeItem{Eliminate extra cost encountered in NovaBrains project by implementing more advanced EBS configuration - single EC2 instance, self-generated Let's Encrypt SSL certs stored in S3, and custom IAM roles}
+      \resumeItemListEnd
+      \resumeTech{Technologies}{AWS (CLI, SAM, R53, EBS, S3, Lambda, Cloudwatch, IAM), Python, JS, GitHub Actions, React, Material UI, Django REST Framework, OpenAI ChatGPT API, Swagger, Slack, Jira, GCP, reCAPTCHA, Postman}  
+
+
+    \resumeSubheading 
+      {(Full-time job) Digital Communications Developer}{College of Charleston IT}
+      {(remote) Greenville, SC.}{Feb 2022 - Present}
+      \resumeItemListStart
+      \resumeItem{
+        \textit{Support.} Meet with business units \& translate business needs into technical solutions, either with existing tools or new custom ones. Minimize custom dev through resourceful investigation of existing tools to reduce overhead, cost, and need for training. Assist with ITSM ticketing in ServiceNow. Create training videos \& KB resources. Support users with web-related issues and questions over chat. Recommend automation when feasible and valuable.
+      }   
+      \resumeItem{
+        \textit{Custom development.} Eliminate COTS costs through automation scripting and full-stack dev when requested. Develop, maintain, \& document Express, Flask, and PHP APIs. Extend organization portal software with SDKs to meet faculty/staff/administration needs. Build new WP themes and plugins as part of 2023 web overhaul. Script cross-environment data syncs (cloud-2-cloud, cloud-2-on-prem, on-prem-2-cloud).  Lead technical side of 2023 web overhaul (new server config \& new CI/CD processes for speeding up deployments for faster responses to marketing requests). Use GitHub Enterprise for centralization, version control, and CI/CD. 
+      }
+
+        \resumeItem{
+      \textit{Devops.} Implement \& oversee version control and CI/CD processes for the WEB team to speed up our turnaround. Continue scaling Icinga for infrastructure monitoring and alerting (see 2019 role). Provision, configure, maintain, and sunset \textit{many} on-prem \& cloud servers. Leverage Ansible to reduce time spent configuring environments. Lead weekly IT change management meeting to discuss active, complete, and upcoming outages/changes/service impacts and communication needs. Prioritize scalability, readability, JSON logging, maintainability \& reusability of all custom work when meant for IT use. Standardize use of service accounts. Link GHE repos with Team webhooks to keep the team in the loop on development progress for key projects. Build and share APIs to automate repetitive internal tasks like updating ACLs for our CMS.
+      }          
+      \resumeItem{
+      \textit{Security.} Secure web servers with firewalls, web server modules, and other best practice measures. Help to regularly patch and update server OSes and software stacks managed by the WEB team. Configure and renew SSL certs. Configure SSO and RBAC with Azure AD. Configure health checks, monitor logs, and respond to increasing DoS attacks when necessary. Help plan \& configure resilient infrastructure with a mix of cloud and on-prem servers (and geo-based R53 traffic routing).
+      } 
+      \resumeItem{
+      \textit{Vendor \& internal relations.} Correspond with vendors for external-to-internal integrations, SSO configurations, SSL cert renewals, domain migrations, troubleshooting support, training, etc. Collaborate with other units and team members on large projects, e.g., data migrations. Participate in RFP panels. 
+      }
+      \resumeItem{ 
+      \textit{Evangelizing modernization.} Advocate for Git, GitHub, GitHub Actions across the IT team for code storage and version control instead of network folders and local file systems; request greater use of Azure AD, Graph API, and SharePoint for identity-related projects rather than custom tools; push (with Marketing collaboration) web content managers to leverage digital form solutions and navigable web content instead of PDFs to improve website accessibility; create training videos for SharePoint Online to aid the org in migrating to a new SharePoint-based intranet; help HR modernize and automate their manual employee recognition process with MS Forms and Power Automate (MS Flow); use \href{https://www.schooldigger.com/}{SchoolDigger's} API to improve prospective student experiences on the \href{https://charleston.edu/admission/counselors/index.php}{Admission website} when searching for an admission counselor; leverage the Ellucian Elevate Live Links API to successfully pilot a new "Continuing Education" course purchasing feature for the School of Business website; advocate for sync between Azure AD groups and MailChimp audience segments with University Communications to help them with campaign targeting, then successfully implement that sync with Graph API and MailChimp API. Research and present TTS options to University Communications for their main news website to give visitors an easy "listen" feature for news articles (now active); discuss, build, pilot and deploy a PowerShell project for Institutional Research to auto-sync their network share files with a new Microsoft Team site on a schedule for easier file access
       }
     
       \resumeItemListEnd
-      \resumeTech{Technologies}{AWS (R53, EBS, S3, Lambda, Cloudwatch, IAM), Python, JS, GitHub Actions, React, Django REST Framework, OpenAI ChatGPT API, Swagger, Slack, Jira, GCP, reCAPTCHA}\\
-    \sepsection
+      \resumeTech{Technologies}{Bash, Python, PHP, Velocity, HTML/CSS/Sass, PowerShell, PnP PowerShell, JS, Selenium, Git/GH/GH Actions, Flask, NodeJS, Express, Nginx, Docker (w/ Compose), Graph API, GraphQL, Azure AD, SharePoint Online, LDAP(S), SSH, Ansible, Vagrant, Insomnia, Postman, ServiceNow, Power Automate/MS Flow, SPO, SAML SSO, MailChimp, Influx, MySQL, PostGreSQL, Grafana, Wordpress, Let's Encrypt, R53, Splunk, Dev Tools, Lighthouse, GA3 and GA4, GTM, Programmable Search Engine}  
 
+    \resumeSubheading 
+      {(Full-time job) Webmaster}
+      {College of Charleston IT}
+      {Charleston, SC}
+      { Dec 2019 - Feb 2022}
 
-    \resumeSubheadingWithDescription
-      {StudyRocket.ai}{An AI-powered study buddy that helps students \textit{master} rather than \textit{memorize} material by providing on-the-fly interactive quizzes about uploaded documents, linked articles, or chosen topics. In collaboration with Ayman Hajja, PhD.}
-      {Roles: Cloud architect, devops engineer, full-stack co-developer, cofounder}{June 2024 - Present}
       \resumeItemListStart
-      \resumeItem{Implement, troubleshoot, and test a very similar cloud-based microservice architecture and CI/CD pipelines to NovaBrains.ai (see above)}
+      \resumeItem{
+        Same responsibilities as Digital Communications Developer role; new title and pay. 
+      }    
       \resumeItemListEnd
-      \resumeTech{Technologies}{AWS, GCP, Python, PySpark, Airflow, Vertex, BigQuery, Dataproc, Tensorflow, BERT.}\\
-    %   \resumeTech{Theory}{Machine learning, AutoML, Feature engineering, Project management.}
-    \sepsection 
 
+    \resumeSubheading
+    {Temp}
+    {College of Charleston}
+    {Charleston, SC}
+    {May 2019 - Dec 2019}
+    \resumeItemListStart
+      \resumeItem{
+        Implement open source distributed network monitoring and alerting with Icinga 2. Deploy configs via Ansible. Script webhook-driven alerts via Python and Teams. Collaborate with NET team for troubleshooting and scaling. Build and maintain a custom app for managing hosts to be monitored by Icinga ("Icinga Host Manager")}
+    \resumeItemListEnd   
+      \resumeTech{Technologies}{
+        Django, Icinga 2, Icinga Director, RHEL, SSH, Ansible, Grafana, Influx, MySQL, Python, Teams, Git/GH, Docker, Apache, Postman, LDAPS
+      }
+
+
+    \resumeSubheading 
+      {Student Network Engineer}
+      {College of Charleston}
+      {Charleston, SC}
+      {Oct 2017 - May 2019}
+      \resumeItemListStart
+      \resumeItem{
+        Handle zero-downtime install and config of Juniper switches and power supplies. Configure UPS NICs, automate mass firmware upgrades with Python, manage inventory, \& train new employees
+      }
+      \resumeItemListEnd
     \resumeSubHeadingListEnd
+
 % PROGRAMMING SKILLS
 \section{Technical skills}
   \resumeSubHeadingListStart
   
-  \resumeSubItem{\textbf{Programming languages:} Python, PowerShell, Bash, JavaScript, TypeScript, SQL}
+  \resumeSubItem{\textbf{Programming \& query languages} Python, PowerShell, Bash, JavaScript, TypeScript, SQL, GraphQL, InfluxQL}
   
-  \resumeSubItem{\textbf{Cloud services:} AWS (see projects), GCP (AI Platform), Azure (Blob storage).}
-  
-  \resumeSubItem{\textbf{Deep learning frameworks:} Keras, Tensorflow.}
-  
-  \resumeSubItem{\textbf{Others:} xgboost, scikit, pandas, falcon, flask, fastapi, Docker, Kubernetes, Jenkins, Terraform}
+  \resumeSubItem{\textbf{Cloud services:} AWS (see projects), GCP (OAuth setup, automated email, drive data migration), Azure AD (RBAC, SSO configurations), SharePoint Online, Graph API, Cloudflare, Twilio, Linode (hosting), Heroku (hosting), Jira (project management), OpenAI ChatGPT API} 
 
-  \resumeSubItem{\textbf{Currently learning:} Transformers models, Vue, Nodejs.}
+  \resumeSubItem{\textbf{Devops tooling:} Git workflow/GH/GH Actions, Docker (w/ Compose), K8s, SSH, Ansible, Grafana, Icinga2, Cron, Splunk, SAM \& Cloudformation, AWS CLI, Jira, Vagrant}
+
+  \resumeSubItem{\textbf{Web dev \& networking:} React, NodeJS, Express, Django, DRF, Flask, Apache, Nginx, reverse proxy config, DNS config, Selenium automation, WP setup/maintenance, WP theme and plugin dev, load balancing, traffic routing policies, SSL cert management, firewall and port troubleshooting, Chrome extension dev}
+  
+  \resumeSubItem{\textbf{Other:} prioritizes clean code, clear docs, \& automation when feasible \& valuable.}
   
   \resumeSubHeadingListEnd
 
@@ -232,72 +300,62 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Vanderbilt University}{Nashville, TN}
-      {M.S. in Computer Science}{May 2021 - Dec 2022}
+      {Vanderbilt University}
+      {Nashville, TN}
+      {M.S. in Computer Science}
+      {May 2021 - Dec 2022}
       \resumeItemListStart
-      \resumeItem{Develop, document, and present large projects for distributed systems, networking, cloud computing, automated verification, data pipelines \& ML/DL, modeling \& meta-modeling, and collaborative software engineering.}
+      \resumeItem{Develop, document, and present large projects for distributed systems, networking, cloud computing, automated verification, data pipelines \& ML/DL, modeling \& meta-modeling, and collaborative software engineering. Focus heavy on theory through implementation.}
       \resumeItem{\href{https://austinjhunt.com/docs/vanderbilt/ms-portfolio.pdf}{M.S. Portfolio \faicon{link}} }
       \resumeItemListEnd
+
+    \resumeSubheading 
+    {College of Charleston}
+    {Charleston, SC}
+    {B.S. in Computer Science}
+    {Aug 2015 - May 2019}
+    \resumeItemListStart
+        \resumeItem{
+        Volunteer with Charleston community, improve public speaking, learn foundational CS theory and principles (data structures, algorithms, testing, networking, virtualization, ethical computing, language paradigms, OOP, complexity, architecture/design, DBMS, security). Apply those in building solo and collaborative software and web projects.
+        }
+        \resumeItem{
+        Work on and speak publicly about multi-year (Oct 2017 - May 2019) full-stack development ed-tech project, \href{https://ieeexplore.ieee.org/document/9028712}{PolyPy}. First project with Ayman Hajja, PhD.
+        }
+    \resumeItemListEnd
+      
   \resumeSubHeadingListEnd  
   
 % CERTIFICATIONS
-\section{Certifications \color{urlcolor}{(with links)}}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {@ Udacity/Coursera}{MOOC}
-      {\href{https://www.coursera.org/account/accomplishments/specialization/58JWPP7YSWY3}{Machine Learning Engineering for Production (MLOps) Specialization}}{Issued July 2022}
+\section{Certifications} 
+
+    \resumeSubHeadingListStart 
     
-    % \resumeSubheading
-    %   {Coursera}{MOOC}
-    \resumeSubSubheading
-      {\href{https://graduation.udacity.com/confirm/AWGF3KVQ}{Machine learning engineer nanodegree}}{Issued March 2021}
+    \resumeSubItem{Docker Certified Associate - DCA - Jan 2021}
     
-    \resumeSubSubheading
-     {\href{https://www.coursera.org/account/accomplishments/specialization/certificate/WYGXVXA327K9}{Deep learning specialization}}{Issued January 2021}
+    \resumeSubItem{Certified Entry-Level Python Programmer - PCEP - May 2020}  
     
-    \resumeSubSubheading
-     {\href{https://www.coursera.org/account/accomplishments/verify/HEURLGHTW46G}{Sequence models}}{Issued January 2021}
-      
-    \resumeSubSubheading
-     {\href{https://www.coursera.org/account/accomplishments/verify/U59ZPPWP5NRN}{Convolutional neural networks}}{Issued September 2020}
+    \resumeSubItem{Certified Associate Python Programmer - PCAP - May 2020}  
     
-    \resumeSubSubheading
-     {\href{https://www.coursera.org/account/accomplishments/verify/BHN34W5WKBUT}{Structuring machine learning projects}}{Issued May 2020} 
+  \resumeSubHeadingListEnd 
    
-    \resumeSubSubheading
-     {\href{https://www.coursera.org/account/accomplishments/records/J76SQGG4PVYL}{Improving deep neural networks: Hyperparameter tuning, regularization and optimization}}{Issued May 2020}
-     
-    \resumeSubSubheading
-     {\href{https://www.coursera.org/account/accomplishments/verify/MBWJ69CVLQAZ}{Neural networks and deep learning}}{Issued May 2020}
-      
-    \resumeSubSubheading
-     {\href{https://www.coursera.org/account/accomplishments/certificate/MZ7TC7ADV7YY}{R Programming}}{Issued September 2016}
-      
-    \resumeSubSubheading
-     {\href{https://www.coursera.org/account/accomplishments/certificate/36JC577GBFYD}{Text mining and analytics}}{Issued August 2016}
-     
-    \resumeSubSubheading
-     {\href{https://www.coursera.org/account/accomplishments/certificate/MDWATFKLPH9Z}{Text retrieval and search engines}}{Issued June 2016}
-     
-    \resumeSubSubheading
-     {\href{https://www.coursera.org/account/accomplishments/certificate/TM7T8CJXNV6R}{The data scientist's toolbox}}{Issued June 2016}
-     
-    \resumeSubSubheading
-     {\href{https://www.coursera.org/account/accomplishments/certificate/WYGG7TDFPB3F}{Data visualization}}{Issued March 2016}
-  \resumeSubHeadingListEnd
   
 % PROJECTS
-\section{Personal Projects \color{urlcolor}{(with links)}}
+\section{Side Projects}
 
   \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://sketchyactivity.com}{sketchyactivity.com - a simple and clean art portfolio SPA built with React; replaced the previous version built with Django, S3, and Slack webhooks}} 
     
+  \resumeSubItem{\href{https://sketchyactivity.com}{sketchyactivity.com} - portrait drawing portfolio website; React, GitHub Pages, Google Analytics 4}  
+
+  \resumeSubItem{\href{https://jerrywestonmize.com/}{jerrywestonmize.com} - music lessons site for my friend; WordPress, Amelia for Payments, Colibri, custom plugins for client interactions}
+
+  \resumeSubItem{\href{https://github.com/austinjhunt/bizbuysell-automation}{BizBuySell Automation} - automate the batch uploading of business listings for a client to BizBuySell, the Internet's largest business for sale exchange; Python, Selenium, AWS Lambda, AWS Elastic Container Registry, Docker, AWS Cloudwatch, AWS S3, standardized JSON logging for client transparency; driven heavily by environment variable values to give client easy control over the script's behavior}
+
   \resumeSubHeadingListEnd
 % ---
  
 
 % PERSONAL PUBLICATIONS
-\section{Co-authored Publications \color{urlcolor}{(with links)}}
+\section{Co-authored Publications}
 
 % \item A Template-Based Spaced Repetition Learning Solution Designed for Educators; 2021 IEEE FIE Conference (FIE); Oct 2021 
 % \item A Novel E-Learning Platform for Building and Publishing Student-Driven Personalized Lessons; 2020 IEEE FIE Conference (FIE); Oct 2020 
@@ -306,11 +364,11 @@
 % 2019 IEEE FIE Conference (FIE); Oct 2019
 
   \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://ieeexplore.ieee.org/document/9637051}{A Template-Based Spaced Repetition Learning Solution Designed for Educators; 2021 IEEE FIE Conference. FIE Conference. Oct 2021}}
+    \resumeSubItem{\href{https://ieeexplore.ieee.org/document/9637051}{A Template-Based Spaced Repetition Learning Solution Designed for Educators; 2021 IEEE FIE Conference. FIE Conference. Oct 2021. Ayman Hajja, Austin Hunt.}}
 
-    \resumeSubItem{\href{https://ieeexplore.ieee.org/document/9274034}{A Novel E-Learning Platform for Building and Publishing Student-Driven Personalized Lessons; 2020 IEEE FIE Conference. FIE Conference. Oct 2020}}
+    \resumeSubItem{\href{https://ieeexplore.ieee.org/document/9274034}{A Novel E-Learning Platform for Building and Publishing Student-Driven Personalized Lessons; 2020 IEEE FIE Conference. FIE Conference. Oct 2020. Ayman Hajja, Austin Hunt.}}
 
-    \resumeSubItem{\href{https://ieeexplore.ieee.org/document/9028712}{PolyPy: A Web-Platform for Generating Quasi-Random Python Code and Gaining Insights on Student Learning; 2019 IEEE FIE Conference. FIE Conference. Oct 2019}}
+    \resumeSubItem{\href{https://ieeexplore.ieee.org/document/9028712}{PolyPy: A Web-Platform for Generating Quasi-Random Python Code and Gaining Insights on Student Learning; 2019 IEEE FIE Conference. FIE Conference. Oct 2019. Ayman Hajja, Austin Hunt, Renée McCauley.}}
     
   \resumeSubHeadingListEnd 
 
