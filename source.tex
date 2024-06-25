@@ -1,0 +1,330 @@
+%-------------------------
+% Resume template with light and dark themes with priority on work experience and technical skills.
+% Author : Austin Hunt
+% Based on: Wilmer Gonzales repo
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% Page coloring, fonts, and logos
+\usepackage{pagecolor}
+\usepackage{lato}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{fontawesome}
+% ---
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+% ---
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{1pt}
+  \scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%  CONTACT
+\newcommand{\contactEmail}{
+  \href{mailto:austincodescleanly@gmail.com}{\color{urlcolor}{\faicon{envelope}} \color{textcolor} austincodescleanly@gmail.com}
+}
+
+\newcommand{\contactPhone}{
+  \href{tel:864-353-3171}{\color{urlcolor}{\faicon{phone}} \color{textcolor} 864-353-3171}
+}
+
+\newcommand{\contactWebsite}{
+  \href{https://austinjhunt.com}{\color{urlcolor}{\faicon{home}} \color{textcolor} austinjhunt.com}
+}
+
+\newcommand{\contactLinkedIn}{
+  \href{https://www.linkedin.com/in/huntaj/}{\color{urlcolor}{\faicon{linkedin}} \color{textcolor} huntaj}
+}
+
+\newcommand{\contactGithub}{
+  \href{https://github.com/austinjhunt}{\color{urlcolor}{\faicon{github}} \color{textcolor} austinjhunt}
+}
+
+\newcommand{\contactCity}{
+  Greenville, South Carolina.
+}
+
+\newcommand{\contactShortSummary}{
+  \textbf{\large{distributed systems engineer, full-stack developer, cloud architect.}}
+}
+
+\newcommand{\contactName}{
+  \textbf{\Large AUSTIN J. HUNT, M.S.}
+}  
+% ---
+
+% Custom commands
+
+\newcommand{\sepsection}{\vspace{10pt}}
+\newcommand{\tablerowvspacesmall}{\\[0.3em]}
+
+\newcommand{\resumeItem}[1]{%2
+  \item\small{
+    %\textbf{#1}
+    #1
+    %{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}\item%-1
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingWithDescription}[4]{
+  \vspace{4pt}\item%-1
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \multicolumn{2}{p{\dimexpr\textwidth-2\tabcolsep}}{\textbf{#1} - \small{#2}} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{1pt}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumeTech}[2]{
+ \underline{#1:} #2
+}
+
+% COLOR THEMES SELECTION
+
+% For Light theme un-comment this and comment the Dark theme section below
+% \colorlet{textcolor}{black}
+% \colorlet{urlcolor}{blue}
+% \newcommand{\otherThemeRef}{\href{https://github.com/austinjhunt/resume/raw/master/austin_hunt_dark.pdf}{ Dark \color{urlcolor}{\faicon{lightbulb-o}}}}
+% \newcommand{\latestVersion}{\href{https://github.com/austinjhunt/resume/raw/master/austin_hunt_light.pdf}{Latest \color{urlcolor}{\faicon{refresh}}}}
+
+% \begin{document}
+% ---
+
+% For Dark theme un-comment this and comment the Light theme section above
+\colorlet{textcolor}{white!80!gray}
+\colorlet{backgroundcolor}{black!70!gray}
+\colorlet{urlcolor}{blue!25!white}
+\AtBeginDocument{\color{textcolor}}
+\newcommand{\otherThemeRef}{\href{https://github.com/austinjhunt/resume/raw/master/austin_hunt_light.pdf}{Light \color{urlcolor}{\faicon{lightbulb-o}}}}
+\newcommand{\latestVersion}{\href{https://github.com/austinjhunt/resume/raw/master/austin_hunt_dark.pdf}{Latest \color{urlcolor}{\faicon{refresh}}}}
+
+\begin{document}
+\pagecolor{backgroundcolor}
+% ---
+
+ 
+
+% HEADING
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \contactName & \contactWebsite \tablerowvspacesmall
+  \contactShortSummary & \contactGithub \tablerowvspacesmall
+  \contactCity & \contactEmail \tablerowvspacesmall
+  \contactPhone & \contactLinkedIn \tablerowvspacesmall
+\end{tabular*}
+\vspace*{-15pt}
+
+% ---
+
+
+% EXPERIENCE
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheadingWithDescription
+      {NovaBrains.ai} {\small{An LLM-assisted digital textbook platform for educators and learners alike, offering an affordable toolkit that simplifies use and management of engaging, interactive courses.} \href{https://www.linkedin.com/in/ayman-hajja-09032b67/}{In collaboration with Ayman Hajja, PhD}. }
+      {Roles: Cloud architect, devops engineer, full-stack co-developer, cofounder} {Oct 2023 - Present}
+      \resumeItemListStart
+      \resumeItem{Architect AWS cloud microservice infrastructure with R53, EBS, Lambda, SAM, S3}
+      \resumeItem{Implement Cloudwatch-integrated Django logging middleware with standardized JSON formatting to simplify troubleshooting and monitoring}
+      \resumeItem{Design and implement CI/CD pipeline with GH Actions, AWS CLI, R53, and EBS with preview environment provisioning and Slack notification webhooks to aid rapid development}
+      \resumeItem{Meet multiple times a week with co-founder to discuss product roadmap, feature development, business strategy, and dev ops strategy for optimal growth}
+      \resumeItem{
+        Co-develop front-end and back-end EBS environments with React and Django REST Framework using GitHub workflow
+      }
+      \resumeItem{
+        Maintain detailed API documentation with Swagger and write API tests for each new endpoint
+      }
+      \resumeItem{
+      Deploy and leverage Lambda functions to offload long-running LLM-based tasks from the main application
+      }
+      \resumeItem{
+        Launch and begin testing a functional service within a few months of initial idea conception
+      }
+      \resumeItem{
+        Leverage GCP for sending automated emails with Gmail API; use Google reCAPTCHA for bot mitigation on public forms
+      }
+      \resumeItem{
+        Expand RBAC logic to allow TAs to assist instructors with course management
+      }
+    
+      \resumeItemListEnd
+      \resumeTech{Technologies}{AWS (R53, EBS, S3, Lambda, Cloudwatch, IAM), Python, JS, GitHub Actions, React, Django REST Framework, OpenAI ChatGPT API, Swagger, Slack, Jira, GCP, reCAPTCHA}\\
+    \sepsection
+
+
+    \resumeSubheadingWithDescription
+      {StudyRocket.ai}{An AI-powered study buddy that helps students \textit{master} rather than \textit{memorize} material by providing on-the-fly interactive quizzes about uploaded documents, linked articles, or chosen topics. In collaboration with Ayman Hajja, PhD.}
+      {Roles: Cloud architect, devops engineer, full-stack co-developer, cofounder}{June 2024 - Present}
+      \resumeItemListStart
+      \resumeItem{Implement, troubleshoot, and test a very similar cloud-based microservice architecture and CI/CD pipelines to NovaBrains.ai (see above)}
+      \resumeItemListEnd
+      \resumeTech{Technologies}{AWS, GCP, Python, PySpark, Airflow, Vertex, BigQuery, Dataproc, Tensorflow, BERT.}\\
+    %   \resumeTech{Theory}{Machine learning, AutoML, Feature engineering, Project management.}
+    \sepsection 
+
+    \resumeSubHeadingListEnd
+% PROGRAMMING SKILLS
+\section{Technical skills}
+  \resumeSubHeadingListStart
+  
+  \resumeSubItem{\textbf{Programming languages:} Python, PowerShell, Bash, JavaScript, TypeScript, SQL}
+  
+  \resumeSubItem{\textbf{Cloud services:} AWS (see projects), GCP (AI Platform), Azure (Blob storage).}
+  
+  \resumeSubItem{\textbf{Deep learning frameworks:} Keras, Tensorflow.}
+  
+  \resumeSubItem{\textbf{Others:} xgboost, scikit, pandas, falcon, flask, fastapi, Docker, Kubernetes, Jenkins, Terraform}
+
+  \resumeSubItem{\textbf{Currently learning:} Transformers models, Vue, Nodejs.}
+  
+  \resumeSubHeadingListEnd
+
+% EDUCATION
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Vanderbilt University}{Nashville, TN}
+      {M.S. in Computer Science}{May 2021 - Dec 2022}
+      \resumeItemListStart
+      \resumeItem{Develop, document, and present large projects for distributed systems, networking, cloud computing, automated verification, data pipelines \& ML/DL, modeling \& meta-modeling, and collaborative software engineering.}
+      \resumeItem{\href{https://austinjhunt.com/docs/vanderbilt/ms-portfolio.pdf}{M.S. Portfolio \faicon{link}} }
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd  
+  
+% CERTIFICATIONS
+\section{Certifications \color{urlcolor}{(with links)}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {@ Udacity/Coursera}{MOOC}
+      {\href{https://www.coursera.org/account/accomplishments/specialization/58JWPP7YSWY3}{Machine Learning Engineering for Production (MLOps) Specialization}}{Issued July 2022}
+    
+    % \resumeSubheading
+    %   {Coursera}{MOOC}
+    \resumeSubSubheading
+      {\href{https://graduation.udacity.com/confirm/AWGF3KVQ}{Machine learning engineer nanodegree}}{Issued March 2021}
+    
+    \resumeSubSubheading
+     {\href{https://www.coursera.org/account/accomplishments/specialization/certificate/WYGXVXA327K9}{Deep learning specialization}}{Issued January 2021}
+    
+    \resumeSubSubheading
+     {\href{https://www.coursera.org/account/accomplishments/verify/HEURLGHTW46G}{Sequence models}}{Issued January 2021}
+      
+    \resumeSubSubheading
+     {\href{https://www.coursera.org/account/accomplishments/verify/U59ZPPWP5NRN}{Convolutional neural networks}}{Issued September 2020}
+    
+    \resumeSubSubheading
+     {\href{https://www.coursera.org/account/accomplishments/verify/BHN34W5WKBUT}{Structuring machine learning projects}}{Issued May 2020} 
+   
+    \resumeSubSubheading
+     {\href{https://www.coursera.org/account/accomplishments/records/J76SQGG4PVYL}{Improving deep neural networks: Hyperparameter tuning, regularization and optimization}}{Issued May 2020}
+     
+    \resumeSubSubheading
+     {\href{https://www.coursera.org/account/accomplishments/verify/MBWJ69CVLQAZ}{Neural networks and deep learning}}{Issued May 2020}
+      
+    \resumeSubSubheading
+     {\href{https://www.coursera.org/account/accomplishments/certificate/MZ7TC7ADV7YY}{R Programming}}{Issued September 2016}
+      
+    \resumeSubSubheading
+     {\href{https://www.coursera.org/account/accomplishments/certificate/36JC577GBFYD}{Text mining and analytics}}{Issued August 2016}
+     
+    \resumeSubSubheading
+     {\href{https://www.coursera.org/account/accomplishments/certificate/MDWATFKLPH9Z}{Text retrieval and search engines}}{Issued June 2016}
+     
+    \resumeSubSubheading
+     {\href{https://www.coursera.org/account/accomplishments/certificate/TM7T8CJXNV6R}{The data scientist's toolbox}}{Issued June 2016}
+     
+    \resumeSubSubheading
+     {\href{https://www.coursera.org/account/accomplishments/certificate/WYGG7TDFPB3F}{Data visualization}}{Issued March 2016}
+  \resumeSubHeadingListEnd
+% ---
+
+%\newpage
+\vspace{1em}
+% PROJECTS
+\section{Personal Projects \color{urlcolor}{(with links)}}
+
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://sketchyactivity.com}{sketchyactivity.com - a simple and clean art portfolio SPA built with React; replaced the previous version built with Django, S3, and Slack webhooks}}
+    
+    \resumeSubItem{\href{https://github.com/austinjhunt/project}{}} 
+    
+  \resumeSubHeadingListEnd
+% ---
+
+\vspace{1em}
+
+% PERSONAL PUBLICATIONS
+\section{Co-authored Publications \color{urlcolor}{(with links)}}
+
+% \item A Template-Based Spaced Repetition Learning Solution Designed for Educators; 2021 IEEE FIE Conference (FIE); Oct 2021 
+% \item A Novel E-Learning Platform for Building and Publishing Student-Driven Personalized Lessons; 2020 IEEE FIE Conference (FIE); Oct 2020 
+% \item  PolyPy: A Web-Platform for Generating Quasi-Random 
+% Python Code and Gaining Insights on Student Learning; 
+% 2019 IEEE FIE Conference (FIE); Oct 2019
+
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://ieeexplore.ieee.org/document/9637051}{A Template-Based Spaced Repetition Learning Solution Designed for Educators; 2021 IEEE FIE Conference. FIE Conference. Oct 2021}}
+
+    \resumeSubItem{\href{https://ieeexplore.ieee.org/document/9274034}{A Novel E-Learning Platform for Building and Publishing Student-Driven Personalized Lessons; 2020 IEEE FIE Conference. FIE Conference. Oct 2020}}
+
+    \resumeSubItem{\href{https://ieeexplore.ieee.org/document/9028712}{PolyPy: A Web-Platform for Generating Quasi-Random Python Code and Gaining Insights on Student Learning; 2019 IEEE FIE Conference. FIE Conference. Oct 2019}}
+  
+     
+    
+  \resumeSubHeadingListEnd
+% ---
+
+%\hfill \textsl{ Not clickable anymore.}
+
+
+% ---
+\end{document}
