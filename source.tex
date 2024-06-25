@@ -6,7 +6,7 @@
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
-
+\usepackage{titlesec}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -32,6 +32,9 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
+% adjust footskip, too small by default
+\setlength{\footskip}{10pt}
+
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
@@ -45,10 +48,16 @@
 % ---
 
 % Sections formatting
-\titleformat{\section}{
-  \vspace{1pt}
-  \scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+% \titleformat{\section}{
+%   \vspace{1pt}
+%   \scshape\raggedright\large
+% }{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% fix section formatting; add long divider under section title; make section title small and all caps 
+\titleformat{\section}
+{\vspace{1pt}\color{textcolor}}
+{}{0em}{}
+[\color{black}\titlerule \vspace{-7pt}]
 
 %  CONTACT
 \newcommand{\contactEmail}{
@@ -167,7 +176,7 @@
 
 
 % EXPERIENCE
-\section{Experience}
+\section{EXPERIENCE}
   \resumeSubHeadingListStart
     \resumeSubheadingWithDescription
       {\href{https://novabrains.ai}{(Part-time project) NovaBrains.ai}} {An LLM-assisted digital textbook platform for educators and learners alike, offering an affordable toolkit that simplifies use and management of engaging, interactive courses. \href{https://www.linkedin.com/in/ayman-hajja-09032b67/}{In collaboration with Ayman Hajja, PhD}. }
@@ -281,7 +290,7 @@
     \resumeSubHeadingListEnd
 
 % PROGRAMMING SKILLS
-\section{Technical skills}
+\section{TECHNICAL SKILLS}
   \resumeSubHeadingListStart
   
   \resumeSubItem{\textbf{Programming \& query languages} Python, PowerShell, Bash, JavaScript, TypeScript, SQL, GraphQL, InfluxQL}
@@ -297,7 +306,7 @@
   \resumeSubHeadingListEnd
 
 % EDUCATION
-\section{Education}
+\section{EDUCATION}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Vanderbilt University}
@@ -326,7 +335,7 @@
   \resumeSubHeadingListEnd  
   
 % CERTIFICATIONS
-\section{Certifications} 
+\section{CERTIFICATIONS} 
 
     \resumeSubHeadingListStart 
     
@@ -340,7 +349,7 @@
    
   
 % PROJECTS
-\section{Side Projects}
+\section{SIDE HUSTLES}
 
   \resumeSubHeadingListStart
     
@@ -355,7 +364,7 @@
  
 
 % PERSONAL PUBLICATIONS
-\section{Co-authored Publications}
+\section{PUBLICATIONS}
 
 % \item A Template-Based Spaced Repetition Learning Solution Designed for Educators; 2021 IEEE FIE Conference (FIE); Oct 2021 
 % \item A Novel E-Learning Platform for Building and Publishing Student-Driven Personalized Lessons; 2020 IEEE FIE Conference (FIE); Oct 2020 
