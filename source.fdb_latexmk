@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1719326869 "/Users/austinhunt/dev/resume-overleaf/source.tex" "/Users/austinhunt/dev/resume-overleaf/source.pdf" "source" 1719326869
-  "/Users/austinhunt/dev/resume-overleaf/source.aux" 1719326869 1311 59bae6842dfd4545f8a878fa6572da56 ""
-  "/Users/austinhunt/dev/resume-overleaf/source.tex" 1719326869 13469 48d96e3bedc3e8d2b4956bd8da695f9d ""
+["pdflatex"] 1719329351 "/Users/austinhunt/dev/resume-overleaf/source.tex" "/Users/austinhunt/dev/resume-overleaf/source.pdf" "source" 1719329373
+  "/Users/austinhunt/dev/resume-overleaf/source.aux" 1719329351 1311 59bae6842dfd4545f8a878fa6572da56 ""
+  "/Users/austinhunt/dev/resume-overleaf/source.tex" 1719329373 13300 ba7b709757d3c048dab13d473397b36e ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc" 1480098667 2679 32dd8ae231bf4a0752b98f62dc097183 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm" 1480098701 1300 63a6111ee6274895728663cf4b4e7e81 ""
@@ -80,13 +80,13 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "source.aux" 1719326869 1311 59bae6842dfd4545f8a878fa6572da56 ""
-  "source.out" 1719326869 369 441af67a677b8df1a32dd4298a6aa917 ""
-  "source.tex" 1719326869 13469 48d96e3bedc3e8d2b4956bd8da695f9d ""
+  "source.aux" 1719329351 1311 59bae6842dfd4545f8a878fa6572da56 ""
+  "source.out" 1719329351 369 441af67a677b8df1a32dd4298a6aa917 ""
+  "source.tex" 1719329373 13300 ba7b709757d3c048dab13d473397b36e ""
   (generated)
-  "source.out"
-  "/Users/austinhunt/dev/resume-overleaf/source.log"
-  "source.aux"
   "source.log"
-  "source.pdf"
   "/Users/austinhunt/dev/resume-overleaf/source.pdf"
+  "/Users/austinhunt/dev/resume-overleaf/source.log"
+  "source.pdf"
+  "source.out"
+  "source.aux"
