@@ -9,28 +9,25 @@ on:
       - main
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-    
-        steps:
-            - uses: actions/checkout@v2
-    
-            - name: Install pandoc
-             run: |
-                sudo apt-get update
-                sudo apt-get install pandoc
-        
-            - name: Generate README.md
-              run: pandoc source.tex -o README.md
+  build:
+    runs-on: ubuntu-latest
 
-            - name: Commit changes
-              run: |
-                git config --global user.email "austin353@gmail.com"
-                git config --global user.name "austinjhunt"
-                git add README.md
-                git commit -m "Generate README.md"
-                git push
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
 
-                
-        
+      - name: Install pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install pandoc
 
+      - name: Generate README.md
+        run: pandoc source.tex -o README.md
+
+      - name: Commit changes
+        run: |
+          git config --global user.email "austin353@gmail.com"
+          git config --global user.name "austinjhunt"
+          git add README.md
+          git commit -m "Generate README.md"
+          git push
